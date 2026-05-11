@@ -49,17 +49,24 @@ a:hover {
 	align-items: center;
 	justify-content: space-between;
 	gap: 24px;
-	padding: 16px 0;
+	padding: 10px 0;
 }
 
 .brand {
-	display: grid;
-	gap: 0;
+	display: block;
+	flex: 0 0 auto;
 	color: var(--green-dark);
-	size: 100 px;
 	font-weight: 700;
 	letter-spacing: 0;
 	line-height: 1.05;
+}
+
+.brand img {
+	display: block;
+	width: clamp(120px, 14vw, 165px);
+	height: auto;
+	max-height: 78px;
+	object-fit: contain;
 }
 
 .brand span:first-child {
@@ -112,7 +119,7 @@ nav a:hover,
 .hero {
 	background:
 		linear-gradient(90deg, rgba(20, 42, 31, 0.78), rgba(20, 42, 31, 0.44)),
-		url("../assets/happy-couple.jpg") center/cover;
+		url("../images/Ombre.png") center/cover;
 	color: #fff;
 }
 
