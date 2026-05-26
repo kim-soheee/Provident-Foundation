@@ -19,7 +19,8 @@ html {
 
 body {
 	margin: 0;
-	font-family: Verdana, Geneva, sans-serif;
+	font-family: Tenor Sans, Verdana, Geneva, sans-serif;
+	font-weight: bold;
 	color: var(--ink);
 	background: var(--paper);
 	line-height: 1.62;
@@ -119,7 +120,7 @@ nav a:hover,
 .hero {
 	background:
 		linear-gradient(90deg, rgba(20, 42, 31, 0.78), rgba(20, 42, 31, 0.44)),
-		url("../images/Ombre.png") center/cover;
+		url("../images/bigtree_no_bg.png") center/cover;
 	color: #fff;
 }
 
