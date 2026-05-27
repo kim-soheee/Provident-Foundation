@@ -130,6 +130,7 @@ nav a:hover,
 	min-height: 520px;
 	display: grid;
 	align-content: center;
+	justify-items: center;
 	padding: 68px 0 76px;
 }
 
@@ -137,7 +138,8 @@ nav a:hover,
 	margin: 0 0 20px;
 	font-size: clamp(2.7rem, 7vw, 5.6rem);
 	line-height: 0.95;
-	max-width: 760px;
+	text-align: center;
+	white-space: nowrap;
 }
 
 .hero p {
@@ -286,5 +288,9 @@ ul.clean li {
 
 	.hero-inner {
 		min-height: 460px;
+	}
+
+	.hero h1 {
+		font-size: clamp(2rem, 10vw, 3.2rem);
 	}
 }
