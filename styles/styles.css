@@ -185,11 +185,14 @@ main {
 }
 
 .panel {
-	padding: 24px;
+	padding: 10px;
 }
 
 .panel h3 {
 	margin-top: 0;
+	margin-bottom: 0;
+	justify-self: center;
+
 }
 
 .media-panel {
@@ -451,8 +454,9 @@ ul.clean li {
 .callout {
 	background: var(--wash);
 	border-left: 5px solid var(--gold);
-	padding: 20px 24px;
+	padding: 20px 80px;
 	margin: 28px 0;
+	justify-self: center;
 }
 
 .footer {
