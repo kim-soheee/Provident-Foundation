@@ -87,6 +87,27 @@ document.querySelectorAll(".accordion-item").forEach((element) => {
 	new AnimatedAccordion(element);
 });
 
+document.querySelectorAll(".site-header").forEach((header) => {
+	const toggle = header.querySelector(".nav-toggle");
+	const nav = header.querySelector(".primary-nav");
+
+	if (!toggle || !nav) {
+		return;
+	}
+
+	toggle.addEventListener("click", () => {
+		const isOpen = header.classList.toggle("is-nav-open");
+		toggle.setAttribute("aria-expanded", String(isOpen));
+	});
+
+	nav.querySelectorAll("a").forEach((link) => {
+		link.addEventListener("click", () => {
+			header.classList.remove("is-nav-open");
+			toggle.setAttribute("aria-expanded", "false");
+		});
+	});
+});
+
 const prefersReducedMotion = window.matchMedia("(prefers-reduced-motion: reduce)").matches;
 
 function isInternalPageLink(link) {

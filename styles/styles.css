@@ -98,6 +98,33 @@ a:hover {
 	object-fit: contain;
 }
 
+.nav-toggle {
+	display: none;
+	align-items: center;
+	justify-content: center;
+	flex-direction: column;
+	gap: 5px;
+	width: 42px;
+	height: 42px;
+	border: 1px solid var(--line);
+	border-radius: 4px;
+	background: #fff;
+	cursor: pointer;
+}
+
+.nav-toggle span {
+	width: 20px;
+	height: 2px;
+	background: var(--green-dark);
+	transition:
+		opacity 180ms ease,
+		transform 180ms ease;
+}
+
+.nav-toggle:hover {
+	background: var(--wash);
+}
+
 nav ul {
 	list-style: none;
 	display: flex;
@@ -585,7 +612,6 @@ ul.clean li {
 }
 
 @media (max-width: 760px) {
-	.header-inner,
 	.grid,
 	.solution,
 	.contact-box {
@@ -593,11 +619,44 @@ ul.clean li {
 	}
 
 	.header-inner {
-		align-items: flex-start;
+		position: relative;
+		align-items: center;
+		flex-wrap: wrap;
+	}
+
+	.nav-toggle {
+		display: flex;
+	}
+
+	.site-header.is-nav-open .nav-toggle span:nth-child(1) {
+		transform: translateY(7px) rotate(45deg);
+	}
+
+	.site-header.is-nav-open .nav-toggle span:nth-child(2) {
+		opacity: 0;
+	}
+
+	.site-header.is-nav-open .nav-toggle span:nth-child(3) {
+		transform: translateY(-7px) rotate(-45deg);
+	}
+
+	.primary-nav {
+		display: none;
+		flex: 0 0 100%;
+	}
+
+	.site-header.is-nav-open .primary-nav {
+		display: block;
 	}
 
 	nav ul {
+		display: grid;
 		gap: 8px;
+		padding-top: 8px;
+	}
+
+	nav a {
+		width: 100%;
 	}
 
 	.hero-inner {
