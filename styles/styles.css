@@ -215,6 +215,19 @@ main h3,
 	text-align: justify;
 }
 
+main p,
+main li,
+.footer p {
+	text-wrap: pretty;
+}
+
+main h1,
+main h2,
+main h3,
+.callout {
+	text-wrap: balance;
+}
+
 .grid,
 .contact-box {
 	display: grid;
