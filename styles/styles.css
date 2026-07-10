@@ -29,6 +29,37 @@ body {
 	line-height: 1.62;
 }
 
+@media (prefers-reduced-motion: no-preference) {
+	body::before {
+		position: fixed;
+		inset: 0;
+		z-index: 999;
+		background: var(--wash);
+		content: "";
+		opacity: 0;
+		pointer-events: none;
+		transition: opacity 120ms ease;
+	}
+
+	html.is-page-exiting body::before {
+		opacity: 0.58;
+	}
+
+	a {
+		transition:
+			background-color 180ms ease,
+			border-color 180ms ease,
+			color 180ms ease,
+			opacity 160ms ease,
+			transform 160ms ease;
+	}
+
+	a.is-link-activating {
+		opacity: 0.82;
+		transform: translateY(1px);
+	}
+}
+
 a {
 	color: var(--green-dark);
 	text-decoration: none;
