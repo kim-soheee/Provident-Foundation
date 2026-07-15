@@ -228,8 +228,8 @@ main {
 	max-width: none;
 }
 
-.solutions-intro {
-	font-size: 0.75rem;
+.section h2.solutions-intro {
+	font-size: 2.5rem;
 	line-height: 1.5;
 }
 
